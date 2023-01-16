@@ -77,6 +77,13 @@ const handleSubmit = async (e) => {
     const uniqueId = generateUniqueId()
     chatContainer.innerHTML += chatStripe(true, " ", uniqueId)
 
+    // to focus scroll to the bottom
+    chatContainer.scrollTop = chatContainer.scrollHeight;
+    setTimeout(() => {
+        chatContainer.scrollTop = chatContainer.scrollHeight;
+    }, 100);
+
+
     // to focus scroll to the bottom 
     chatContainer.scrollTop = chatContainer.scrollHeight;
 
