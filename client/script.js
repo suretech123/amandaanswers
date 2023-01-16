@@ -104,7 +104,7 @@ const handleSubmit = async (e) => {
         const parsedData = data.bot.trim() // trims any trailing spaces/'\n' 
 
         typeText(messageDiv, parsedData)
-        messageDiv.scrollIntoView({ behavior: 'smooth' });
+        chatContainer.scrollIntoView({ behavior: 'smooth' });
     } else {
         const err = await response.text()
 
