@@ -6,6 +6,7 @@ const chatContainer = document.querySelector('#chat_container')
 
 let loadInterval
 
+// Function to handle the loading animation
 function loader(element) {
     element.textContent = ''
 
@@ -20,6 +21,7 @@ function loader(element) {
     }, 300);
 }
 
+// Function to handle the typing text effect
 function typeText(element, text) {
     let index = 0
 
