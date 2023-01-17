@@ -113,9 +113,6 @@ const handleSubmit = async (e) => {
     }
 }
 
-document.getElementById("chat_container").scrollTop = 0;
-
-
 form.addEventListener('submit', handleSubmit)
 form.addEventListener('keyup', (e) => {
     if (e.keyCode === 13) {
