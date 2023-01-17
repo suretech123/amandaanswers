@@ -49,7 +49,7 @@ body {
 }
 
 .ai {
-  background: #ffffff;
+  background: #40414F;
 }
 
 .chat {
@@ -116,7 +116,7 @@ form {
   max-width: 1280px;
   margin: 0 auto;
   padding: 10px;
-  background: #40414F;
+  background: #ffffff;
 
   display: flex;
   flex-direction: row;
@@ -126,7 +126,7 @@ form {
 textarea {
   width: 100%;
 
-  color: #fff;
+  color: rgb(0, 0, 0);
   font-size: 18px;
 
   padding: 10px;
