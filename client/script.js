@@ -70,10 +70,6 @@ const handleSubmit = async (e) => {
     // user's chatstripe
     chatContainer.innerHTML += chatStripe(false, data.get('prompt'))
 
-
-    // to focus scroll to the bottom 
-    chatContainer.scrollTop = chatContainer.scrollHeight;
-
     // to clear the textarea input 
     form.reset()
 
@@ -82,6 +78,7 @@ const handleSubmit = async (e) => {
     chatContainer.innerHTML += chatStripe(true, " ", uniqueId)
 
     // to focus scroll to the bottom 
+    chatContainer.scrollTop = 0;
     chatContainer.scrollTop = chatContainer.scrollHeight;
 
     // specific message div 
