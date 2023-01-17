@@ -44,4 +44,10 @@ app.post('/', async (req, res) => {
     }
 })
 
+function setIframeHeight() {
+    let iframeHeight = document.body.scrollHeight;
+    window.parent.postMessage(iframeHeight, "*");
+}
+
+
 app.listen(5000, () => console.log('Server is running on amandaanswers.com.au'));
