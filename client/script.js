@@ -119,9 +119,3 @@ form.addEventListener('keyup', (e) => {
         handleSubmit(e)
     }
 })
-
-window.addEventListener("message", (event) => {
-  if (event.data) {
-      document.querySelector("iframe").style.height = event.data + "px";
-  }
-});

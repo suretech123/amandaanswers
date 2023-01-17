@@ -44,17 +44,4 @@ app.post('/', async (req, res) => {
     }
 })
 
-function setIframeHeight() {
-    let iframeHeight = document.body.scrollHeight;
-    window.parent.postMessage(iframeHeight, "*");
-}
-
-app.post('/', async (req, res) => {
-    // code to handle the request and generate response
-    // update the chatstripe
-    setIframeHeight();
-    // send the response
-  });
-  
-
 app.listen(5000, () => console.log('Server is running on amandaanswers.com.au'));
