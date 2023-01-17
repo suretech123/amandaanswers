@@ -119,3 +119,7 @@ form.addEventListener('keyup', (e) => {
         handleSubmit(e)
     }
 })
+
+window.onload = function() {
+  chatContainer.scrollTop = chatContainer.scrollHeight;
+}
