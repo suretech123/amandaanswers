@@ -156,3 +156,8 @@ form img {
   bottom: 0;
 }
 
+#iframe-wrapper {
+  overflow: auto;
+}
+
+
