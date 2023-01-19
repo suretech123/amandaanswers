@@ -120,12 +120,3 @@ form.addEventListener('keyup', (e) => {
     }
 })
 
-setInterval(function(){
-  var newHeight = iframe.contentWindow.document.body.scrollHeight;
-  iframe.style.height = newHeight + 'px';
-}, 1000);
-
-
-
-
-
