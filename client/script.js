@@ -138,6 +138,7 @@ function updateIframeHeight() {
   iframe.height = iframe.contentWindow.document.body.scrollHeight + "px";
 }
 
+iframe.style.height = iframe.contentDocument.body.scrollHeight + "px";
 
 
 
