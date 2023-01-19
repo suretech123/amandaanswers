@@ -121,16 +121,22 @@ form.addEventListener('keyup', (e) => {
 })
 
 
+// Select the iframe element
 const iframe = document.getElementById("chat-iframe");
-const container = document.getElementById("chat-container");
 
-// Get the content from the iframe
-const iframeContent = iframe.contentDocument.body;
+// Wait for the iframe to load
+iframe.onload = function() {
+  // Set the iframe's height to be equal to the height of the content inside the iframe
+  iframe.height = iframe.contentWindow.document.body.scrollHeight + "px";
 
-// Append the content to the new container element
-container.appendChild(iframeContent);
+  // Call the function that will keep the iframe's height updated as new content is added
+  setInterval(updateIframeHeight, 1000);
+};
 
-container.scrollTop = container.scrollHeight;
+// Function that will update the iframe's height
+function updateIframeHeight() {
+  iframe.height = iframe.contentWindow.document.body.scrollHeight + "px";
+}
 
 
 

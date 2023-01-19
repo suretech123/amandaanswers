@@ -149,8 +149,9 @@ form img {
 }
 
 #chat-iframe {
-  overflow: hidden;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
+  height: 80%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
 }
 
