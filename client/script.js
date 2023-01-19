@@ -124,6 +124,7 @@ form.addEventListener('keyup', (e) => {
 
 
 const topSection = document.querySelector(".top-section")
+const chatPrompt = document.querySelector("#chat-prompt") // the prompt box
 
 // When the user starts interacting with the chatbot prompt
 topSection.style.height = "0" // decrease the height to 0
@@ -132,5 +133,9 @@ topSection.style.overflow = "hidden" // hide the overflow
 // When the user stops interacting with the chatbot prompt
 topSection.style.height = "original height" // reset the height to its original value
 topSection.style.overflow = "visible" // show the overflow
+
+// to keep the prompt box always visible
+chatPrompt.scrollIntoView({ behavior: 'smooth' });
+
 
 
