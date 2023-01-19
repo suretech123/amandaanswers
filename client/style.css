@@ -154,7 +154,9 @@ iframe#chat-iframe {
   width: 100%;
   height: calc(100vh - 300px); /* adjust this value as needed */
   overflow: auto; /* this allows for scrolling within the iframe */
+  z-index: 999;
 }
+
 
 
 
