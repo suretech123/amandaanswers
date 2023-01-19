@@ -123,25 +123,6 @@ form.addEventListener('keyup', (e) => {
 const iframe = document.getElementById("chat-iframe");
 const parentContainer = document.getElementById("iframe-wrapper");
 
-function setParentContainerHeight() {
-    parentContainer.style.height = iframe.clientHeight + "px";
-}
-
-iframe.onload = function() {
-  setParentContainerHeight();
-}
-
-form.addEventListener('submit', handleSubmit);
-form.addEventListener('keyup', (e) => {
-    if (e.keyCode === 13) {
-        handleSubmit(e);
-    }
-});
-
-
-const iframe = document.getElementById("chat-iframe");
-const parentContainer = document.getElementById("iframe-wrapper");
-
 setInterval(() => {
   parentContainer.style.height = iframe.clientHeight + "px";
 }, 200);
