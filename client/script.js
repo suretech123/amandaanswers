@@ -153,3 +153,7 @@ function appendMessage(text, isUser) {
 function scrollToTop() {
   chatContainer.scrollTop = 0;
 }
+
+const iframe = document.getElementById("chat-iframe");
+iframe.src = "https://amandaanswers.vercel.app";
+
