@@ -149,5 +149,6 @@ form img {
 }
 
 iframe {
-  height: 100%;
+  overflow: hidden;
 }
+
