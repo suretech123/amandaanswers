@@ -150,3 +150,8 @@ form img {
 
 
 
+#chat_container {
+  /* existing code */
+  height: 80vh; /* set the height of the container to 80% of the viewport height */
+  overflow-y: scroll; /* add a scrollbar if the content inside the container exceeds the fixed height */
+}

@@ -119,3 +119,37 @@ form.addEventListener('keyup', (e) => {
         handleSubmit(e)
     }
 })
+
+
+const chatContainer = document.getElementById("chat_container");
+
+// Function to append messages to the chat container
+function appendMessage(text, isUser) {
+  const messageWrapper = document.createElement("div");
+  messageWrapper.classList.add("wrapper");
+
+  if (!isUser) {
+    messageWrapper.classList.add("ai");
+  }
+
+  const chat = document.createElement("div");
+  chat.classList.add("chat");
+
+  const profile = document.createElement("div");
+  profile.classList.add("profile");
+
+  const message = document.createElement("div");
+  message.classList.add("message");
+  message.innerText = text;
+
+  chat.appendChild(profile);
+  chat.appendChild(message);
+  messageWrapper.appendChild(chat);
+  chatContainer.insertBefore(messageWrapper, chatContainer.firstChild);
+}
+
+
+// Function to scroll to the top of the chat container
+function scrollToTop() {
+  chatContainer.scrollTop = 0;
+}
