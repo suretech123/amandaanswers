@@ -148,11 +148,33 @@ form img {
   height: 30px;
 }
 
-.sticky-iframe {
+
+
+
+#chat-prompt-container {
   position: fixed;
   bottom: 0;
-  overflow: scroll;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background: #fff;
+  border-top: 1px solid #ccc;
+  display: flex;
+  align-items: center;
 }
+#chat-prompt {
+  width: 100%;
+  padding: 10px;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+#response-text {
+  width: 100%;
+  height: calc(100% - 110px);
+  overflow-y: scroll;
+}
+
 
 
 
