@@ -165,7 +165,7 @@ form img {
 #chat-prompt {
   width: 100%;
   padding: 10px;
-  background: transparent;
+  background: #fff;
   border: none;
   outline: none;
 }
