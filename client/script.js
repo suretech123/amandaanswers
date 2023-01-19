@@ -138,3 +138,12 @@ form.addEventListener('keyup', (e) => {
     }
 });
 
+
+const iframe = document.getElementById("chat-iframe");
+const parentContainer = document.getElementById("iframe-wrapper");
+
+setInterval(() => {
+  parentContainer.style.height = iframe.clientHeight + "px";
+}, 200);
+
+
