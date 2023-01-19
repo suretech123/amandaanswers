@@ -176,5 +176,23 @@ form img {
 }
 
 
+#chat-container {
+  position: relative;
+  height: 100vh;
+}
+
+form {
+  position: absolute;
+  bottom: 0;
+}
+
+iframe {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  overflow: auto;
+}
+
+
 
 
