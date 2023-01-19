@@ -120,14 +120,21 @@ form.addEventListener('keyup', (e) => {
     }
 })
 
-function stickChatPrompt() {
+
+iframe.onload = function() {
   const viewportHeight = window.innerHeight;
-  const chatPromptHeight = chatPrompt.offsetHeight;
-  const bottom = viewportHeight - chatPromptHeight;
-  chatPrompt.style.bottom = `${bottom}px`;
+  const iframeHeight = iframe.offsetHeight;
+  const bottom = viewportHeight - iframeHeight;
+  iframe.style.bottom = bottom + "px";
 }
 
-window.addEventListener("load", stickChatPrompt);
+window.addEventListener('resize', function() {
+  const viewportHeight = window.innerHeight;
+  const iframeHeight = iframe.offsetHeight;
+  const bottom = viewportHeight - iframeHeight;
+  iframe.style.bottom = bottom + "px";
+});
+
 
 
 
