@@ -64,6 +64,8 @@ function chatStripe(isAi, value, uniqueId) {
 
 const handleSubmit = async (e) => {
     e.preventDefault()
+    
+    const textarea = document.querySelector('textarea'); //new code
 
     const data = new FormData(form)
 
@@ -119,21 +121,5 @@ form.addEventListener('keyup', (e) => {
         handleSubmit(e)
     }
 })
-
-// get the iframe element
-const iframe = document.getElementById('chat-iframe');
-
-// listen for changes to the iframe's content
-iframe.onload = function() {
-  // get the iframe's window object
-  const iframeWindow = iframe.contentWindow;
-
-  // listen for changes to the iframe's height
-  iframeWindow.onresize = function() {
-    // set the iframe's height to its content's height
-    iframe.style.height = iframeWindow.document.body.scrollHeight + 'px';
-    window.scrollTo(0, document.body.scrollHeight);
-  }
-}
 
 
