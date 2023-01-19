@@ -128,12 +128,13 @@ iframe.onload = function() {
   iframe.style.bottom = bottom + "px";
 }
 
-window.addEventListener('resize', function() {
-  const viewportHeight = window.innerHeight;
-  const iframeHeight = iframe.offsetHeight;
-  const bottom = viewportHeight - iframeHeight;
-  iframe.style.bottom = bottom + "px";
+$(document).ready(function() {
+  var viewportHeight = $(window).height();
+  var iframeHeight = $('#chat-iframe').height();
+  var bottom = viewportHeight - iframeHeight;
+  $('#chat-iframe').css('bottom', bottom);
 });
+
 
 
 
