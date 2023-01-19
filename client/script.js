@@ -119,3 +119,14 @@ form.addEventListener('keyup', (e) => {
         handleSubmit(e)
     }
 })
+
+const chatIframe = document.getElementById("chat-iframe")
+
+// When the user starts interacting with the chatbot prompt
+chatIframe.height = "100vh" // increase the height to take up the whole screen
+chatIframe.scrolling = "yes" // enable scrolling
+
+// When the user stops interacting with the chatbot prompt
+chatIframe.height = "original height" // reset the height to its original value
+chatIframe.scrolling = "no" // disable scrolling
+
