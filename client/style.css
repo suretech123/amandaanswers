@@ -149,9 +149,10 @@ form img {
 }
 
 #chat-iframe {
-  height: 80%;
+  overflow: hidden;
   width: 100%;
-  position: absolute;
+  height: 100%;
+  position: fixed;
   bottom: 0;
 }
 
