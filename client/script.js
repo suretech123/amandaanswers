@@ -123,3 +123,6 @@ form.addEventListener('keyup', (e) => {
 })
 
 
+const iframe = document.getElementById("chat-iframe");
+iframe.style.height = "100%";
+iframe.style.overflow = "auto";
