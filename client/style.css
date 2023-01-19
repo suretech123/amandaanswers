@@ -147,3 +147,10 @@ form img {
   width: 30px;
   height: 30px;
 }
+
+#chat-prompt {
+  position: fixed; /* position the element relative to the viewport */
+  bottom: 0; /* align the element to the bottom of the viewport */
+  left: 0; /* align the element to the left of the viewport */
+  right: 0; /* align the element to the right of the viewport */
+}
