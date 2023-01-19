@@ -124,7 +124,8 @@ const iframe = document.getElementById("chat-iframe");
 const parentContainer = document.getElementById("iframe-wrapper");
 
 setInterval(() => {
-  parentContainer.style.height = iframe.clientHeight + "px";
+  const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+  parentContainer.style.height = iframeDoc.body.clientHeight + "px";
 }, 200);
 
 
