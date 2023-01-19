@@ -156,4 +156,3 @@ function scrollToTop() {
 
 const iframe = document.getElementById("chat-iframe");
 iframe.src = "https://amandaanswers.vercel.app";
-
