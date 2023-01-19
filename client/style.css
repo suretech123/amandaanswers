@@ -148,3 +148,7 @@ form img {
   height: 30px;
 }
 
+iframe {
+  height: 100%;
+  overflow: auto;
+}

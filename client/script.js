@@ -65,8 +65,6 @@ function chatStripe(isAi, value, uniqueId) {
 const handleSubmit = async (e) => {
     e.preventDefault()
     
-    const textarea = document.querySelector('textarea'); //new code
-
     const data = new FormData(form)
 
     // user's chatstripe
@@ -121,8 +119,3 @@ form.addEventListener('keyup', (e) => {
         handleSubmit(e)
     }
 })
-
-
-const iframe = document.getElementById("chat-iframe");
-iframe.style.height = "100%";
-iframe.style.overflow = "auto";
