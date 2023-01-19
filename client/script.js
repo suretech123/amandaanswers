@@ -121,19 +121,16 @@ form.addEventListener('keyup', (e) => {
 })
 
 
-iframe.onload = function() {
-  const viewportHeight = window.innerHeight;
-  const iframeHeight = iframe.offsetHeight;
-  const bottom = viewportHeight - iframeHeight;
-  iframe.style.bottom = bottom + "px";
-}
+const iframe = document.getElementById("chat-iframe");
+const container = document.getElementById("chat-container");
 
-$(document).ready(function() {
-  var viewportHeight = $(window).height();
-  var iframeHeight = $('#chat-iframe').height();
-  var bottom = viewportHeight - iframeHeight;
-  $('#chat-iframe').css('bottom', bottom);
-});
+// Get the content from the iframe
+const iframeContent = iframe.contentDocument.body;
+
+// Append the content to the new container element
+container.appendChild(iframeContent);
+
+container.scrollTop = container.scrollHeight;
 
 
 
