@@ -151,6 +151,8 @@ form img {
 #chat-iframe {
   position: fixed;
   bottom: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
   /* other styles */
 }
 
