@@ -119,15 +119,3 @@ form.addEventListener('keyup', (e) => {
         handleSubmit(e)
     }
 })
-
-const iframe = document.getElementById("chat-iframe");
-iframe.onload = function() {
-    iframe.style.height = window.innerHeight + "px";
-    iframe.contentWindow.scrollTo(0, iframe.contentWindow.document.body.scrollHeight);
-}
-
-window.addEventListener("resize", function() {
-  iframe.style.height = window.innerHeight + "px";
-  iframe.contentWindow.scrollTo(0, iframe.contentWindow.document.body.scrollHeight);
-});
-
