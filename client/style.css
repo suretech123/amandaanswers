@@ -148,15 +148,6 @@ form img {
   height: 30px;
 }
 
-iframe#chat-iframe {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: calc(100vh - 300px); /* adjust this value as needed */
-  overflow: auto; /* this allows for scrolling within the iframe */
-  z-index: 999;
-}
-
 
 
 
