@@ -164,7 +164,13 @@ html, body {
 }
 
 
-#chat_container {
-  height: 80%;
+.chat-container {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+form {
+  position: fixed;
+  bottom: 0;
 }
 
