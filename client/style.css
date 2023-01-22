@@ -167,7 +167,11 @@ html, body {
 .chat-container {
   height: 100%;
   overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
 
 form {
   position: fixed;
