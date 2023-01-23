@@ -165,7 +165,7 @@ html, body {
 
 
 .chat-container {
-  height: calc(100vh - 100px);
+  height: 100%
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
