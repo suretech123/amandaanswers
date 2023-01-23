@@ -157,6 +157,7 @@ iframe {
   bottom: 0;
   width: 100%;
   height: 20%; /* adjust the height to your desired size */
+  overflow: auto;
 }
 
 html, body {
