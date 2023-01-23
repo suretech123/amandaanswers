@@ -3,10 +3,6 @@ import user from './assets/user.svg'
 
 const iframe = document.getElementById('chat-iframe');
 
-iframe.addEventListener('load', () => {
-  iframe.contentDocument.body.scrollIntoView();
-});
-
 
 const form = document.querySelector('form')
 const chatContainer = document.querySelector('#chat_container')
@@ -126,3 +122,7 @@ form.addEventListener('keyup', (e) => {
         handleSubmit(e)
     }
 })
+
+iframe.addEventListener('load', () => {
+    iframe.contentDocument.body.scrollIntoView();
+});
