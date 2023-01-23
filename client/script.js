@@ -63,7 +63,10 @@ function chatStripe(isAi, value, uniqueId) {
 }
 
 function scrollToBottom() {
-    chatContainer.scrollTop = chatContainer.scrollHeight;
+    const iframe = document.getElementById("chat-iframe");
+    const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+    const iframeBody = iframeDoc.body;
+    iframeBody.scrollTop = iframeBody.scrollHeight;
 }
 
 const handleSubmit = async (e) => {
