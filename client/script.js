@@ -69,6 +69,7 @@ const handleSubmit = async (e) => {
 
     // user's chatstripe
     chatContainer.innerHTML += chatStripe(false, data.get('prompt'))
+    scrollToBottom();
 
     // to clear the textarea input 
     form.reset()
@@ -76,9 +77,6 @@ const handleSubmit = async (e) => {
     // bot's chatstripe
     const uniqueId = generateUniqueId()
     chatContainer.innerHTML += chatStripe(true, " ", uniqueId)
-
-    // to focus scroll to the bottom 
-    chatContainer.scrollTop = chatContainer.scrollHeight;
 
     // specific message div 
     const messageDiv = document.getElementById(uniqueId)
@@ -103,8 +101,8 @@ const handleSubmit = async (e) => {
         const data = await response.json();
         const parsedData = data.bot.trim() // trims any trailing spaces/'\n' 
 
-        typeText(messageDiv, parsedData)
-        chatContainer.lastElementChild.scrollIntoView();
+        typeText(messageDiv, parsedData);
+        scrollToBottom();
       } else {
         const err = await response.text()
 
@@ -112,6 +110,7 @@ const handleSubmit = async (e) => {
         alert(err)
     }
 }
+
 
 form.addEventListener('submit', handleSubmit)
 form.addEventListener('keyup', (e) => {
@@ -123,9 +122,4 @@ form.addEventListener('keyup', (e) => {
 function scrollToBottom() {
     chatContainer.scrollTop = chatContainer.scrollHeight;
 }
-
-chatContainer.innerHTML += chatStripe(false, data.get('prompt'));
-scrollToBottom();
-typeText(messageDiv, parsedData);
-scrollToBottom();
 
