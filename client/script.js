@@ -62,6 +62,10 @@ function chatStripe(isAi, value, uniqueId) {
     )
 }
 
+function scrollToBottom() {
+    chatContainer.scrollTop = chatContainer.scrollHeight;
+}
+
 const handleSubmit = async (e) => {
     e.preventDefault()
     
@@ -119,7 +123,5 @@ form.addEventListener('keyup', (e) => {
     }
 })
 
-function scrollToBottom() {
-    chatContainer.scrollTop = chatContainer.scrollHeight;
-}
+
 
