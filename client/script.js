@@ -63,9 +63,12 @@ function chatStripe(isAi, value, uniqueId) {
 }
 
 function scrollToBottom() {
-    const iframe = document.getElementById("chat-iframe");
-    iframe.contentWindow.scrollTo(0, iframe.contentDocument.body.scrollHeight);
+    setTimeout(() => {
+        const iframe = document.getElementById("chat-iframe");
+        iframe.contentWindow.scrollTo(0, iframe.contentDocument.body.scrollHeight);
+    }, 100);
 }
+
 
 
 const handleSubmit = async (e) => {
