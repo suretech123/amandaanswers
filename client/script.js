@@ -62,13 +62,6 @@ function chatStripe(isAi, value, uniqueId) {
     )
 }
 
-function scrollToBottom() {
-    const iframe = document.getElementById("chat-iframe");
-    iframe.contentDocument.body.scrollTop = iframe.contentDocument.body.scrollHeight;
-}
-
-
-
 const handleSubmit = async (e) => {
     e.preventDefault()
     
@@ -77,16 +70,15 @@ const handleSubmit = async (e) => {
     // user's chatstripe
     chatContainer.innerHTML += chatStripe(false, data.get('prompt'))
 
-    iframe.contentDocument.body.addEventListener('DOMSubtreeModified', scrollToBottom);
-
-    scrollToBottom();
-
     // to clear the textarea input 
     form.reset()
 
     // bot's chatstripe
     const uniqueId = generateUniqueId()
     chatContainer.innerHTML += chatStripe(true, " ", uniqueId)
+
+    // to focus scroll to the bottom 
+    chatContainer.scrollTop = chatContainer.scrollHeight;
 
     // specific message div 
     const messageDiv = document.getElementById(uniqueId)
@@ -111,8 +103,8 @@ const handleSubmit = async (e) => {
         const data = await response.json();
         const parsedData = data.bot.trim() // trims any trailing spaces/'\n' 
 
-        typeText(messageDiv, parsedData);
-        scrollToBottom();
+        typeText(messageDiv, parsedData)
+        chatContainer.lastElementChild.scrollIntoView();
       } else {
         const err = await response.text()
 
@@ -120,7 +112,6 @@ const handleSubmit = async (e) => {
         alert(err)
     }
 }
-
 
 form.addEventListener('submit', handleSubmit)
 form.addEventListener('keyup', (e) => {
