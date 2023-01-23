@@ -120,7 +120,12 @@ form.addEventListener('keyup', (e) => {
     }
 })
 
-chatContainer.innerHTML += chatStripe(false, data.get('prompt'))
+function scrollToBottom() {
+    chatContainer.scrollTop = chatContainer.scrollHeight;
+}
+
+chatContainer.innerHTML += chatStripe(false, data.get('prompt'));
 scrollToBottom();
 typeText(messageDiv, parsedData);
 scrollToBottom();
+
