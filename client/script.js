@@ -64,10 +64,9 @@ function chatStripe(isAi, value, uniqueId) {
 
 function scrollToBottom() {
     const iframe = document.getElementById("chat-iframe");
-    const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-    const iframeBody = iframeDoc.body;
-    iframeBody.scrollTop = iframeBody.scrollHeight;
+    iframe.contentWindow.scrollTo(0, iframe.contentDocument.body.scrollHeight);
 }
+
 
 const handleSubmit = async (e) => {
     e.preventDefault()
