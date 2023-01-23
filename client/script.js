@@ -1,6 +1,8 @@
 import bot from './assets/bot.svg'
 import user from './assets/user.svg'
 
+document.addEventListener("DOMContentLoaded", function() {
+    const iframe = document.getElementById('chat-iframe');
 const iframe = document.getElementById('chat-iframe');
 
 
@@ -133,3 +135,4 @@ setTimeout(() => {
     clearInterval(intervalId);
 }, 10000);
 
+});
