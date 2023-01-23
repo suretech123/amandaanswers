@@ -1,9 +1,6 @@
 import bot from './assets/bot.svg'
 import user from './assets/user.svg'
 
-document.addEventListener("DOMContentLoaded", function() {
-    const iframe = document.getElementById('chat-iframe');
-const iframe = document.getElementById('chat-iframe');
 
 
 const form = document.querySelector('form')
@@ -124,15 +121,3 @@ form.addEventListener('keyup', (e) => {
         handleSubmit(e)
     }
 })
-
-// Add this code at the bottom of the script.js file after the form.addEventListener('submit', handleSubmit) block of code
-const intervalId = setInterval(() => {
-    iframe.contentWindow.scrollTo(0, iframe.contentDocument.body.scrollHeight);
-}, 50);
-
-// stop interval after some time
-setTimeout(() => {
-    clearInterval(intervalId);
-}, 10000);
-
-});
