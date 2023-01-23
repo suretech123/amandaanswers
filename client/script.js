@@ -1,6 +1,13 @@
 import bot from './assets/bot.svg'
 import user from './assets/user.svg'
 
+const iframe = document.getElementById('chat-iframe');
+
+iframe.addEventListener('load', () => {
+  iframe.contentDocument.body.scrollIntoView();
+});
+
+
 const form = document.querySelector('form')
 const chatContainer = document.querySelector('#chat_container')
 
