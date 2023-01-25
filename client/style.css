@@ -135,6 +135,8 @@ textarea {
   border-radius: 5px;
   border: none;
   outline: none;
+  overflow: hidden;
+  resize: none;
 }
 
 button {
